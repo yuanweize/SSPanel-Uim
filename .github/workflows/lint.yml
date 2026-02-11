@@ -25,6 +25,8 @@ jobs:
       template: ${{ steps.filter.outputs.template }}
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: upstream
       - uses: dorny/paths-filter@v3
         id: filter
         with:
@@ -42,6 +44,8 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: upstream
       
       - uses: shivammathur/setup-php@v2
         with:
@@ -76,6 +80,8 @@ jobs:
     timeout-minutes: 5
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: upstream
         with:
           fetch-depth: 0
       
