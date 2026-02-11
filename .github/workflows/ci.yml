@@ -19,6 +19,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
+          ref: upstream
+        with:
           fetch-depth: 0
       - uses: dorny/paths-filter@v3
         id: filter
@@ -73,6 +75,8 @@ jobs:
     
     steps:
     - uses: actions/checkout@v4
+        with:
+          ref: upstream
     
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
@@ -149,6 +153,8 @@ jobs:
     
     steps:
     - uses: actions/checkout@v4
+        with:
+          ref: upstream
     
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
@@ -195,6 +201,8 @@ jobs:
     
     steps:
     - uses: actions/checkout@v4
+        with:
+          ref: upstream
     
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
